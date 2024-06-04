@@ -8,4 +8,4 @@ RUN git clone https://github.com/danielmiessler/fabric.git
 RUN git clone https://github.com/nomore1007/deepthought-bot.git
 RUN pipx install fabric/
 ENV PATH="${PATH}:/root/.local/bin/"
-% yes " " | fabric --setup
+RUN yes " " | fabric --setup
