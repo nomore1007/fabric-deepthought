@@ -4,5 +4,5 @@ RUN apt update && apt upgrade -y && apt install ffmpeg pipx git curl build-essen
 WORKDIR "/app"
 RUN curl -L https://github.com/danielmiessler/fabric/releases/latest/download/fabric-linux-amd64 > fabric && chmod +x fabric && ./fabric --version
 RUN git clone https://github.com/nomore1007/deepthought-bot.git
-ENV PATH="${PATH}:/root/.local/bin/"
+ENV PATH="${PATH}:$HOME/:$PATH"
 RUN fabric --setup
